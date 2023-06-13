@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(bc <<< "scale=2; $BREATH^$LOVE")
+awk -v base="$BREATH" -v exponent="$LOVE" 'BEGIN { result = 1; for (i = 1; i <= exponent; i++) result *= base; print result }'
