@@ -1,2 +1,7 @@
 #!/bin/bash
-awk -v base="$BREATH" -v exponent="$LOVE" 'BEGIN { result = 1; for (i = 1; i <= exponent; i++) result *= base; print result }'
+result=1
+for ((i=1; i<=LOVE; i++))
+do
+  result=$((result * BREATH))
+done
+echo $result
